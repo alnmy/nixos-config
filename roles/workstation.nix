@@ -49,6 +49,7 @@
 		# System utilities
 		git
 		vim
+		agenix.defaultPackage.x86_64-linux
 		# Games
 		mindustry
 		# Media

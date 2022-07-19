@@ -67,10 +67,7 @@
 			icc-profile = "auto";
 
 			# window
-			no-border = "";
 			keep-open = "";
-			osc = "no";
-			osd-bar = "no";
 			force-window = "immediate";
 		};
 		profiles = {

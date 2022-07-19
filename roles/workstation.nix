@@ -38,4 +38,8 @@
 
 	# Firewall
 	networking.firewall.enable = true;
+
+	# Desktop
+	services.xserver.desktopManager.plasma5.enable = true;	
+	services.xserver.displayManager.sddm5.enable = true;
 }

@@ -54,4 +54,9 @@
 		# Media
 		qbittorrent	
 	];
+
+	programs.java = {
+		enable = true;
+		package = with pkgs; adoptopenjdk-jre-openj9-bin-16;
+	};
 }

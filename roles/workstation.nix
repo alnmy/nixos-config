@@ -51,5 +51,7 @@
 		vim
 		# Games
 		mindustry
+		# Media
+		qbittorrent	
 	];
 }

@@ -1,4 +1,4 @@
-{ pkgs, hardware, home-manager, ... }: 
+{ pkgs, hardware, home-manager, agenix, ... }: 
 {
 	imports = [ 
 		./subroles/printer.nix

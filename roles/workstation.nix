@@ -1,4 +1,4 @@
-{ pkgs, hardware, home-manager, agenix, ... }: 
+{ pkgs, hardware, home-manager, ... }: 
 {
 	imports = [ 
 		./subroles/printer.nix
@@ -49,7 +49,6 @@
 		# System utilities
 		git
 		vim
-		agenix.defaultPackage.x86_64-linux
 		# Games
 		mindustry
 		# Media

@@ -20,9 +20,14 @@
       url = "github:nix-community/home-manager/release-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.agenix.inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
-    { self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, ... }:
+    { self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, agenix, ... }:
     let
       system = "x86_64-linux";
       overlay-unstable = self: super: {
@@ -39,6 +44,7 @@
           ({ lib, config, pkgs, ... }: 
           {
             imports = [
+              agenix.nixosModule
               home-manager.nixosModules.home-manager
               (import ./boxes/lithium-desktop.nix {
                 inherit pkgs lib nixpkgs nixpkgs-unstable home-manager;

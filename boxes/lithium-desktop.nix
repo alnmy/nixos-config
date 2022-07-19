@@ -41,4 +41,6 @@
 		device = "/dev/pool/root";
 		fsType = "xfs";
 	};
+
+	swapDevices = [ { device = "/swapfile"; size = 8192; } ];
 }

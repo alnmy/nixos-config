@@ -46,6 +46,10 @@
 
 	# Packages
 	environment.systemPackages = with pkgs; [
+		# System utilities
 		git
+		vim
+		# Games
+		mindustry
 	];
 }

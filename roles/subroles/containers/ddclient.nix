@@ -2,7 +2,7 @@
 {
 	system.stateVersion = "22.05";
 	
-	age.secrets.ddclient.file = ../../../secrets/ddclient.age;
+	config.age.secrets.ddclient.file = ../../../secrets/ddclient.age;
 			
 	services.ddclient = {
 		enable = true;
@@ -12,6 +12,6 @@
 		protocol = "namecheap";
 		server = "dynamicdns.park-your-domain.com";
 		username = "alnn.xyz";
-		passwordFile = age.secrets.ddclient.path;
+		passwordFile = config.age.secrets.ddclient.path;
 	};
 }

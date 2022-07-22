@@ -7,6 +7,5 @@ let
 	systems = [ pi lithium-desktop ];
 in
 {
-	# TODO: actually use agenix, and use more than just my public key for the secret files.
-	"ddclient.age".publicKeys = alan ++ pi;
+	"ddclient.age".publicKeys = systems;
 }

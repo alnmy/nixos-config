@@ -33,6 +33,11 @@
 	};
 
 	# Containers
+
+	# ddclient
+	age.secrets.ddclient.file = ../secrets/ddclient.age;
+	environment.etc."ddclient.conf".source = age.secrets.ddclient.path;
+	
 	containers.ddclient = {
 		config = import ./subroles/containers/ddclient.nix;
 		autoStart = true;

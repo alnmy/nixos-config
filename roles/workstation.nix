@@ -32,6 +32,19 @@
 		enableSSHSupport = true;
 	};
 
+	# Containers
+	containers.ddclient = {
+		config = import ./subroles/containers/ddclient.nix;
+		autoStart = true;
+		privateNetwork = false;
+		bindMounts = {
+			"/etc/ddclient.conf" = {
+				hostPath = "/etc/ddclient.conf";
+				isReadOnly = true;
+			};
+		};
+	};
+
 	# Games
 	hardware.opengl.driSupport32Bit = true;
 	programs.steam.enable = true;

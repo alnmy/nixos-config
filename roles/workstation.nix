@@ -49,6 +49,7 @@
 		# System utilities
 		git
 		vim
+		pkgs.unstable.libstrangle
 		# Games
 		mindustry
 		# Media

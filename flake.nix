@@ -44,7 +44,7 @@
           ({ lib, config, pkgs, ... }: 
           {
             imports = [
-              agenix.nixosModule
+              agenix.nixosModules.age
               home-manager.nixosModules.home-manager
               (import ./boxes/lithium-desktop.nix {
                 inherit pkgs lib nixpkgs nixpkgs-unstable home-manager;
@@ -54,7 +54,7 @@
               })
               (import ./common/localisation.nix)
             ];
-            nixpkgs.overlays = [ overlay-unstable ];
+            nixpkgs.overlays = [ overlay-unstable  ];
             nixpkgs.config.allowUnfree = true;
             nixpkgs.config.allowBroken = true;
 

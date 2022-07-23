@@ -64,6 +64,11 @@
 	services.xserver.desktopManager.plasma5.enable = true;	
 	services.xserver.displayManager.sddm.enable = true;
 
+	# Fonts
+	fonts.fonts = with pkgs; [ 
+		unstable.cozette
+	];
+
 	# Packages
 	environment.systemPackages = with pkgs; [
 		# System utilities

@@ -26,8 +26,8 @@
       inputs.agenix.inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs =
-    { self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, agenix, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager
+    , agenix, ... }:
     let
       system = "x86_64-linux";
       overlay-unstable = self: super: {
@@ -41,8 +41,7 @@
       nixosConfigurations.lithium-desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ({ lib, config, pkgs, ... }: 
-          {
+          ({ lib, config, pkgs, ... }: {
             imports = [
               agenix.nixosModules.age
               home-manager.nixosModules.home-manager
@@ -54,33 +53,9 @@
               })
               (import ./common/localisation.nix)
             ];
-            nixpkgs.overlays = [ overlay-unstable  ];
-            nixpkgs.config.allowUnfree = true;
-            nixpkgs.config.allowBroken = true;
-
-            system.configurationRevision =
-              nixpkgs.lib.mkIf (self ? rev) self.rev;
-            nix.registry.nixpkgs.flake = nixpkgs;
-          })
-        ];
-      };
-      nixosConfigurations.pi-server = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          ({ lib, config, pkgs, ... }: {
-            imports = [
-              home-manager.nixosModules.home-manager
-              nixos-hardware.nixosModules.raspberry-pi-4
-
-              # INCOMPLETE
-
-              (import ./common/flake-conf.nix {
-                inherit pkgs nixpkgs nixpkgs-unstable;
-              })
-              (import ./common/localisation.nix)
-            ];
             nixpkgs.overlays = [ overlay-unstable ];
             nixpkgs.config.allowUnfree = true;
+            nixpkgs.config.allowBroken = true;
 
             system.configurationRevision =
               nixpkgs.lib.mkIf (self ? rev) self.rev;

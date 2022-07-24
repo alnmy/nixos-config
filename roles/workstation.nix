@@ -32,26 +32,6 @@
 		enableSSHSupport = true;
 	};
 
-	# Containers
-
-	# ddclient
-	age.secrets.ddclient = {
-		file = ../secrets/ddclient.age;
-		path = "/etc/ddclient.conf";
-	};
-	
-	containers.ddclient = {
-		config = import ./subroles/containers/ddclient.nix;
-		autoStart = true;
-		privateNetwork = false;
-		bindMounts = {
-			"/etc/ddclient.conf" = {
-				hostPath = "/etc/ddclient.conf";
-				isReadOnly = true;
-			};
-		};
-	};
-
 	# Games
 	hardware.opengl.driSupport32Bit = true;
 	programs.steam.enable = true;

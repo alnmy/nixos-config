@@ -1,4 +1,4 @@
-{ lib, pkgs, nixos-hardware, ... }:
+{ lib, pkgs, ... }:
 
 {
 	# Kernel
@@ -9,16 +9,8 @@
 		"quiet"
 	];
 
-	# Build options
-	nix = {
-		settings = {
-			max-jobs = 2;
-			cores = lib.mkDefault config.nix.settings.max-jobs;
-		};
-	};
-
 	# Power management
-	powerManagement.cpuFreqGovernor = lib.mkDefault "ondemand";
+	powerManagement.cpuFreqGovernor = "ondemand";
 
 	# Wireless Firmware 
 	hardware.enableRedistributableFirmware = true;
@@ -29,7 +21,4 @@
 		grub.enable = false;
 		generic-extlinux-compatible.enable = true;
 	};
-
-	# Swap file
-	swapDevices = [ { device = "/swapfile"; size = 8192; }];
 }

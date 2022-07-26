@@ -1,4 +1,4 @@
-{ lib, pkgs, nixos-hardware, ... }:
+{ lib, pkgs, ... }:
 
 {
 	# Boot splash screen
@@ -10,11 +10,7 @@
 	boot.supportedFilesystems = [ "ntfs" ];
 
 	# Build options
-	nix = {
-		settings = {
-			max-jobs = 8;
-		};
-	};
+	nix.settings.max-jobs = 8;
 
 	# Power management
 	powerManagement.cpuFreqGovernor = lib.mkDefault "conservative";

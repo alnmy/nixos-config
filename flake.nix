@@ -63,5 +63,29 @@
           })
         ];
       };
+      nixosConfigurations.pi-server = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          ({ lib, config, pkgs, ... }: {
+            imports = [
+              nixos-hardware.nixosModules.raspberry-pi-4
+              agenix.nixosModules.age
+              (import ./boxes/pi-server.nix {
+                inherit pkgs lib nixpkgs nixpkgs-unstable;
+              })
+              (import ./common/flake-conf.nix {
+                inherit pkgs nixpkgs nixpkgs-unstable;
+              })
+              (import ./common/localisation.nix)
+            ];
+            nixpkgs.overlays = [ overlay-unstable ];
+            nixpkgs.config.allowUnfree = true;
+
+            system.configurationRevision =
+              nixpkgs.lib.mkIf (self ? rev) self.rev;
+            nix.registry.nixpkgs.flake = nixpkgs;
+          })
+        ];
+      };
     };
 }

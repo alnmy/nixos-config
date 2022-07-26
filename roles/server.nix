@@ -4,7 +4,7 @@
 		description = "Alan,,,alan@alnn.xyz";
 		isNormalUser = true;
 		extraGroups = [ "wheel" ];
-		openssh.authorizedKeys.keys = (import ../secrets/secrets.nix null).alan;
+		openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIbObAoVSAHbjVV0hW5YpTevSnrvGpZleBVrSI87trcL alnn@box" ];
 	};
 
 	nix.trustedUsers = [ "root" "alan" ];

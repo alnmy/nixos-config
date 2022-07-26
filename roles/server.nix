@@ -30,7 +30,7 @@
 			22
 			53
 		];
-		allowed UDPPorts = [
+		allowedUDPPorts = [
 			53
 		];
 	};

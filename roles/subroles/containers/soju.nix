@@ -7,7 +7,7 @@
     services.nginx.virtualHosts."bouncer.alnn.xyz" = {
         serverName = "bouncer.alnn.xyz";
         enableACME = true;
-        addSSL = true;
+        forceSSL = true;
     };
 
     containers.soju = {

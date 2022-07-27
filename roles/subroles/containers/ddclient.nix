@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
 	age.secrets.ddclient = {
-		file = ../../../secrets/ddclient.nix;
+		file = ../../../secrets/ddclient.age;
 		path = "/etc/ddclient.conf";
 	};
 

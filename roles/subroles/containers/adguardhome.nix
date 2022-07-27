@@ -65,8 +65,12 @@
 			{
 				containerPort = 53;
 				hostPort = 53;
-				# Both TCP and UDP is required, but I'm not sure how to do this
 				protocol = "tcp";
+			}
+			{
+				containerPort = 53;
+				hostPort = 53;
+				protocol = "udp";
 			}
 		];
 		bindMounts = {

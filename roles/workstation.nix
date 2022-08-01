@@ -50,6 +50,7 @@
 	];
 
 	# Packages
+	environment.defaultPackages = [];
 	environment.systemPackages = with pkgs; [
 		# System utilities
 		git

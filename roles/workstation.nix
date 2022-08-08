@@ -58,6 +58,7 @@
 		pkgs.unstable.libstrangle
 		# Games
 		mindustry
+		unstable.polymc
 		# Media
 		qbittorrent	
 	];

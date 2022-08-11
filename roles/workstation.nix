@@ -59,6 +59,7 @@
 		# Games
 		mindustry
 		unstable.polymc
+		mangohud
 		# Media
 		qbittorrent	
 	];

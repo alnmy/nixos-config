@@ -64,7 +64,7 @@
 			# video
 			profile ="gpu-hq";
 			hwdec = "nvdev-copy";
-			icc-profile = "auto";
+			icc-profile-auto = "";
 
 			# window
 			keep-open = "";

@@ -14,9 +14,6 @@
 	# Home-manager
 	home-manager.useGlobalPkgs = true;
 	home-manager.users.alan = ../users/alan/home.nix;
-	# Secrets
-	age.secrets.alan-email = {
-		file = ../secrets/	
 
 	nix.trustedUsers = [ "root" "alan" ];
 

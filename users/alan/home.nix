@@ -35,6 +35,9 @@
 		enable = true;
 	};
 
+	# KDE Connect
+	services.kdeconnect.enable = true;
+
 	# MPV
 	programs.mpv = {
 		enable = true;

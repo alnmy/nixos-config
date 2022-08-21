@@ -62,13 +62,14 @@
 		git
 		vim
 		pkgs.unstable.libstrangle
-		ark
+		ark rar
 		# Games
 		mindustry
 		unstable.polymc
 		mangohud
 		# Media
-		qbittorrent	
+		qbittorrent
+		flameshot
 	];
 
 	programs.java = {

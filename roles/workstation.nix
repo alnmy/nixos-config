@@ -63,6 +63,7 @@
 		vim
 		pkgs.unstable.libstrangle
 		ark rar
+		plasma-systemmonitor
 		# Games
 		mindustry
 		unstable.polymc

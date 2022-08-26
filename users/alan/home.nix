@@ -39,12 +39,6 @@
 	programs.chromium = {
 		enable = true;
 		package = pkgs.ungoogled-chromium;
-
-		extensions =
-		[
-			# U-Block Origin
-			{ id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; }
-		];
 	};
 
 	# KDE Connect

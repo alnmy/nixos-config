@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
 	imports = [
-		./packages/mpv/default.nix;
+		./packages/mpv/default.nix
 	];
 
 	programs.home-manager.enable = true;

@@ -71,6 +71,7 @@
 		# Media
 		qbittorrent
 		flameshot
+		qimgv
 	];
 
 	programs.java = {

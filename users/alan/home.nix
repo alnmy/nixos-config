@@ -23,6 +23,7 @@
 
 		"image/webp" = imageViewer;
 		"image/png" = imageViewer;
+		"image/jpeg" = imageViewer;
 		"image/gif" = imageViewer;
 		"image/bmp" = imageViewer;
 	};

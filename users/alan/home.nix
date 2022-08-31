@@ -9,12 +9,22 @@
 
 	# XDG
 	xdg.mimeApps.enable = true;
-	xdg.mimeApps.defaultApplications = {
-		"text/html" = "chromium-browser.desktop";
-		"x-scheme-handler/http" = "chromium-browser.desktop";
-		"x-scheme-handler/https" = "chromium-browser.desktop";
-		"x-scheme-handler/about" = "chromium-browser.desktop";
-		"x-scheme-handler/unknown" = "chromium-browser.desktop";
+	xdg.mimeApps.defaultApplications = 
+	let
+		webBrowser = [ "chromium-browser.desktop" ];
+		imageViewer = [ "qimgv.desktop" ];
+	in
+	{
+		"text/html" = webBrowser";
+		"x-scheme-handler/http" = webBrowser;
+		"x-scheme-handler/https" = webBrowser;
+		"x-scheme-handler/about" = webBrowser;
+		"x-scheme-handler/unknown" = webBrowser;
+
+		"image/webp" = imageViewer;
+		"image/png" = imageViewer;
+		"image/gif" = imageViewer;
+		"image/bmp" = imageViewer;
 	};
 
 	home.packages = with pkgs; [

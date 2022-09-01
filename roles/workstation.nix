@@ -58,10 +58,12 @@
 	# Packages
 	environment.defaultPackages = [];
 	environment.systemPackages = with pkgs; [
+		# Browser
+		unstable.ungoogled-chromium
 		# System utilities
 		git
 		vim
-		pkgs.unstable.libstrangle
+		unstable.libstrangle
 		ark rar
 		plasma-systemmonitor
 		# Games

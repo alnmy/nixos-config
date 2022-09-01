@@ -54,12 +54,6 @@
 		qbittorrent
 	];
 
-	# Chromium
-	programs.chromium = {
-		enable = true;
-		package = pkgs.ungoogled-chromium;
-	};
-
 	# KDE Connect
 	services.kdeconnect.enable = true;
 }

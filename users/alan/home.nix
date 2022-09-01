@@ -37,6 +37,9 @@
 	};
 
 	home.packages = with pkgs; [
+		# Browser
+		ungoogled-chromium
+
 		# Editors
 		unstable.kate
 

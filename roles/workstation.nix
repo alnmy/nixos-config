@@ -80,4 +80,8 @@
 		enable = true;
 		package = with pkgs; adoptopenjdk-jre-openj9-bin-16;
 	};
+
+	# ADB
+	programs.adb.enable = true;
+	users.users.alan.extraGroups = [ "adbusers" ];
 }

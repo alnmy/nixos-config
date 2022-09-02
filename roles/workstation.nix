@@ -8,7 +8,7 @@
 	users.users.alan = {
 		description = "Alan,,,alan@alnn.xyz";
 		isNormalUser = true;
-		extraGroups = [ "wheel" ];
+		extraGroups = [ "wheel" "adbusers" ];
 	};
 
 	# Home-manager
@@ -83,5 +83,4 @@
 
 	# ADB
 	programs.adb.enable = true;
-	users.users.alan.extraGroups = [ "adbusers" ];
 }

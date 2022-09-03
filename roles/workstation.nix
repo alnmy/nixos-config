@@ -3,6 +3,7 @@
 	imports = [ 
 		./subroles/printer.nix
 		./subroles/pipewire.nix
+		./subroles/vmware.nix
 	];
 
 	users.users.alan = {
@@ -83,7 +84,4 @@
 
 	# ADB
 	programs.adb.enable = true;
-
-	# Virtualisation
-	virtualisation.vmware.host.enable = true;
 }

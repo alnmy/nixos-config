@@ -74,8 +74,6 @@
 		qbittorrent
 		flameshot
 		qimgv
-		# Virtual Machines
-		vmware-workstation
 	];
 
 	programs.java = {
@@ -85,4 +83,7 @@
 
 	# ADB
 	programs.adb.enable = true;
+
+	# Virtualisation
+	virtualisation.vmware.host.enable = true;
 }

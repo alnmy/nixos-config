@@ -6,7 +6,6 @@
 		../roles/workstation.nix 
 	];
 	
-	boot.kernelPackages = pkgs.linuxPackages_zen;
 	boot.loader = {
 		efi.canTouchEfiVariables = true;
 		systemd-boot = {

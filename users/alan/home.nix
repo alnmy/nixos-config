@@ -2,6 +2,7 @@
 {
 	imports = [
 		./packages/mpv/default.nix
+		./packages/syncthing/default.nix
 	];
 
 	programs.home-manager.enable = true;

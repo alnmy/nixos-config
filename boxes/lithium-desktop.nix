@@ -43,4 +43,22 @@
 	};
 
 	swapDevices = [ { device = "/swapfile"; size = 8192; } ];
+
+	# Hard-drives
+	fileSystems = let
+		fs = "ntfs";
+		ntfsOptions = [ "rw" "user" "exec" "uid=1000" "gid=1000" "umask=000" ];
+	in
+	{
+		"/mnt/hdd" = {
+			device = "/dev/disk/by-label/HDD";
+			fsType = fs;
+			options = ntfsOptions;
+		};
+		"/mnt/hdd2" = {
+			device = "/dev/disk/by-label/HDD2";
+			fsType = fs;
+			options = ntfsOptions;
+		};
+	};
 }

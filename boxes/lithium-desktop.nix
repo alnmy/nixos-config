@@ -32,32 +32,30 @@
 		}];
 	};
 
-	fileSystems."/boot" = {
-		device = "/dev/disk/by-label/boot";
-		fsType = "vfat";
-	};
-
-	fileSystems."/" = {
-		device = "/dev/pool/root";
-		fsType = "xfs";
-	};
-
 	swapDevices = [ { device = "/swapfile"; size = 8192; } ];
 
-	# Hard-drives
+	# Mount points 
 	fileSystems = let
-		fs = "ntfs";
 		ntfsOptions = [ "rw" "user" "exec" "uid=1000" "gid=1000" "umask=000" ];
 	in
 	{
+		"/" = {
+			device = "/dev/pool/root";
+			fsType = "xfs";
+		};
+		"/boot" = {
+			device = "/dev/disk/by-label/boot";
+			fsType = "vfat";
+		};
+
 		"/mnt/hdd" = {
 			device = "/dev/disk/by-label/HDD";
-			fsType = fs;
+			fsType = "ntfs";
 			options = ntfsOptions;
 		};
 		"/mnt/hdd2" = {
 			device = "/dev/disk/by-label/HDD2";
-			fsType = fs;
+			fsType = "ntfs";
 			options = ntfsOptions;
 		};
 	};

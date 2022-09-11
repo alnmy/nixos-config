@@ -75,6 +75,8 @@
 		qbittorrent
 		flameshot
 		qimgv
+		# Work
+		libreoffice-qt
 	];
 
 	programs.java = {

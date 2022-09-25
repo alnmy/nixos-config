@@ -8,6 +8,8 @@
 	boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
 	boot.kernelModules = [ "kvm-amd" "hid_apple" ];	
 	boot.supportedFilesystems = [ "ntfs" ];
+	# Necessary for nvidia-vaapi-driver to work
+	boot.kernelParams = [ "nvidia-drm.modeset=1" ];
 
 	# Build options
 	nix.settings.max-jobs = 8;
@@ -34,6 +36,12 @@
 			nvidia-vaapi-driver
 		];
 	};	
+
+	# Use VA-API
+	environment.variables = {
+		LIBVA_DRIVER_NAME = "nvidia";
+		MOZ_DISABLE_RDD_SANDBOX=1
+	};
 
 	# Mouse input
 	services.xserver.libinput = {

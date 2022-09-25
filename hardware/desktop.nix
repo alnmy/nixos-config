@@ -40,7 +40,7 @@
 	# Use VA-API
 	environment.variables = {
 		LIBVA_DRIVER_NAME = "nvidia";
-		MOZ_DISABLE_RDD_SANDBOX=1
+		MOZ_DISABLE_RDD_SANDBOX = "1";
 	};
 
 	# Mouse input

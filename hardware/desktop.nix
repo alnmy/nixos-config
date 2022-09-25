@@ -24,8 +24,17 @@
 		"nvidia-x11"
 	];
 	services.xserver.videoDrivers = [ "nvidia" ];
-	hardware.opengl.enable = true;
-	
+	hardware.opengl = {
+		enable = true;
+		driSupport = true;
+		driSupport32Bit = true;
+		extraPackages = with pkgs; [
+			vaapiVdpau
+			libvdpau-va-gl
+			nvidia-vaapi-driver
+		];
+	};	
+
 	# Mouse input
 	services.xserver.libinput = {
 		enable = true;

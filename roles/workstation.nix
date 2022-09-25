@@ -59,6 +59,7 @@
 	environment.defaultPackages = [];
 	environment.systemPackages = with pkgs; [
 		# Browser
+		unstable.librewolf
 		unstable.ungoogled-chromium
 		# System utilities
 		git

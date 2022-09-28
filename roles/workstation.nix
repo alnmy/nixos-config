@@ -75,6 +75,7 @@
 		qbittorrent
 		flameshot
 		qimgv
+		obs-studio
 		# Work
 		libreoffice-qt
 	];

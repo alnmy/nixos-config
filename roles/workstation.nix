@@ -67,6 +67,7 @@
 		unstable.libstrangle
 		ark rar
 		plasma-systemmonitor
+		wineWowPackages.stagingFull
 		# Games
 		mindustry
 		unstable.polymc

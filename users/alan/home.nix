@@ -51,7 +51,4 @@
 		qimgv
 		qbittorrent
 	];
-
-	# KDE Connect
-	services.kdeconnect.enable = true;
 }

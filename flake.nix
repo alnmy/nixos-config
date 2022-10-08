@@ -50,6 +50,7 @@
             imports = [
               agenix.nixosModules.age
               home-manager.nixosModules.home-manager
+              nix-gaming.nixosModules.pipewireLowLatency
               (import ./boxes/lithium-desktop.nix {
                 inherit pkgs lib nixpkgs nixpkgs-unstable home-manager nix-gaming;
               })

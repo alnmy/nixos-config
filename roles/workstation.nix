@@ -64,7 +64,6 @@
 		plasma-systemmonitor
 		wineWowPackages.stagingFull
 		# Games
-		mindustry
 		unstable.polymc
 		mangohud
 		# Media

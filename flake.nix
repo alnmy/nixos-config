@@ -25,9 +25,14 @@
       url = "github:ryantm/agenix";
       inputs.agenix.inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager
-    , agenix, ... }:
+    , agenix, nix-gaming, ... }:
     let
       system = "x86_64-linux";
       overlay-unstable = self: super: {
@@ -46,11 +51,12 @@
               agenix.nixosModules.age
               home-manager.nixosModules.home-manager
               (import ./boxes/lithium-desktop.nix {
-                inherit pkgs lib nixpkgs nixpkgs-unstable home-manager;
+                inherit pkgs lib nixpkgs nixpkgs-unstable home-manager nix-gaming;
               })
               (import ./common/flake-conf.nix {
                 inherit pkgs nixpkgs nixpkgs-unstable;
               })
+              (import ./common/cachix.nix)
               (import ./common/localisation.nix)
             ];
             nixpkgs.overlays = [ overlay-unstable ];

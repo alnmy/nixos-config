@@ -4,6 +4,7 @@
 		./subroles/printer.nix
 		./subroles/pipewire.nix
 		./subroles/vmware.nix
+		./subroles/gaming.nix
 	];
 
 	users.users.alan = {
@@ -34,9 +35,6 @@
 		enableSSHSupport = true;
 	};
 
-	# Games
-	programs.steam.enable = true;
-
 	# Firewall
 	networking.firewall.enable = true;
 
@@ -63,9 +61,6 @@
 		ark rar
 		plasma-systemmonitor
 		wineWowPackages.stagingFull
-		# Games
-		unstable.polymc
-		mangohud
 		# Media
 		qbittorrent
 		flameshot

@@ -11,6 +11,7 @@
 		description = "Alan,,,alan@alnn.xyz";
 		isNormalUser = true;
 		extraGroups = [ "wheel" "adbusers" ];
+		initialPassword = "sexo";
 	};
 
 	# Home-manager

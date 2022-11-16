@@ -36,8 +36,6 @@
 		}];
 	};
 
-	swapDevices = [ { device = "/swapfile"; size = 8192; } ];
-
 	# Mount points 
 	fileSystems = let
 		ntfsOptions = [ "rw" "user" "exec" "uid=1000" "gid=1000" "umask=000" ];

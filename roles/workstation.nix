@@ -59,6 +59,7 @@
 		git
 		vim
 		unstable.libstrangle
+		python39Full python39Packages.pip
 		ark rar
 		plasma-systemmonitor
 		wineWowPackages.stagingFull
@@ -69,6 +70,8 @@
 		obs-studio
 		# Work
 		libreoffice-qt
+		# Virtualisation
+		qemu_full
 	];
 
 	programs.java = {

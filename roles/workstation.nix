@@ -71,8 +71,10 @@
 		# Work
 		libreoffice-qt
 		# Virtualisation
-		qemu_full libvirt
+		qemu_full
 	];
+
+	virtualisation.libvirtd.enable = true;
 
 	programs.java = {
 		enable = true;

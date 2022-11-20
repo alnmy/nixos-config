@@ -71,7 +71,7 @@
 		# Work
 		libreoffice-qt
 		# Virtualisation
-		qemu_full
+		qemu_full libvirt
 	];
 
 	programs.java = {

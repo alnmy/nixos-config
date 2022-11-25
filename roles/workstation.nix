@@ -70,6 +70,7 @@
 		obs-studio
 		# Work
 		libreoffice-qt
+		vscode-fhs
 		# Virtualisation
 		qemu_full
 	];
